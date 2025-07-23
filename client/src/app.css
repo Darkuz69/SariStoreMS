@@ -1,25 +1,74 @@
 @import 'tailwindcss';
 
 :root {
-    --bg-dark: hsl(223 88% 2%);
-    --bg: hsl(216 64% 5%);
-    --bg-light: hsl(214 40% 9%);
-    --text: hsl(214 100% 97%);
-    --text-muted: hsl(214 36% 72%);
-    --highlight: hsl(214 23% 41%);
-    --border: hsl(214 30% 30%);
-    --border-muted: hsl(214 43% 19%);
-    --primary: hsl(214 78% 73%);
-    --secondary: hsl(35 58% 62%);
-    --danger: hsl(9 26% 64%);
-    --warning: hsl(52 19% 57%);
-    --success: hsl(146 17% 59%);
-    --info: hsl(217 28% 65%);  
+  /* hsl (fallback color) */
+  --bg-dark: hsl(230 100% 4%);
+  --bg: hsl(220 100% 6%);
+  --bg-light: hsl(214 79% 10%);
+  --text: hsl(214 100% 99%);
+  --text-muted: hsl(214 78% 73%);
+  --highlight: hsl(213 46% 42%);
+  --border: hsl(213 62% 30%);
+  --border-muted: hsl(211 100% 18%);
+  --primary: hsl(214, 78%, 73%);
+  --secondary: hsl(35 58% 62%);
+  --danger: hsl(9 53% 66%);
+  --warning: hsl(51 35% 50%);
+  --success: hsl(149 34% 54%);
+  --info: hsl(217 59% 67%);
+  /* oklch */
+  --bg-dark: oklch(0.1 0.05 255);
+  --bg: oklch(0.15 0.05 255);
+  --bg-light: oklch(0.2 0.05 255);
+  --text: oklch(0.96 0.1 255);
+  --text-muted: oklch(0.76 0.1 255);
+  --highlight: oklch(0.5 0.1 255);
+  --border: oklch(0.4 0.1 255);
+  --border-muted: oklch(0.3 0.1 255);
+  --primary: oklch(0.76 0.1 255);
+  --secondary: oklch(0.76 0.1 75);
+  --danger: oklch(0.7 0.1 30);
+  --warning: oklch(0.7 0.1 100);
+  --success: oklch(0.7 0.1 160);
+  --info: oklch(0.7 0.1 260);
+}
+body.light {
+  /* hsl (fallback color) */
+  --bg-dark: hsl(214 100% 92%);
+  --bg: hsl(214 100% 97%);
+  --bg-light: hsl(214 100% 100%);
+  --text: hsl(231 100% 9%);
+  --text-muted: hsl(213 62% 30%);
+  --highlight: hsl(214 100% 100%);
+  --border: hsl(214 43% 53%);
+  --border-muted: hsl(214 60% 66%);
+  --primary: hsl(213 62% 30%);
+  --secondary: hsl(40 100% 16%);
+  --danger: hsl(8 40% 42%);
+  --warning: hsl(52 82% 24%);
+  --success: hsl(154 58% 29%);
+  --info: hsl(217 42% 43%);
+  /* oklch */
+  --bg-dark: oklch(0.92 0.05 255);
+  --bg: oklch(0.96 0.05 255);
+  --bg-light: oklch(1 0.05 255);
+  --text: oklch(0.15 0.1 255);
+  --text-muted: oklch(0.4 0.1 255);
+  --highlight: oklch(1 0.1 255);
+  --border: oklch(0.6 0.1 255);
+  --border-muted: oklch(0.7 0.1 255);
+  --primary: oklch(0.4 0.1 255);
+  --secondary: oklch(0.4 0.1 75);
+  --danger: oklch(0.5 0.1 30);
+  --warning: oklch(0.5 0.1 100);
+  --success: oklch(0.5 0.1 160);
+  --info: oklch(0.5 0.1 260);
 }
 
 * {
     margin: 0;
     box-sizing: border-box;
+    font-family: "Roboto", sans-serif;
 }
 
 body {

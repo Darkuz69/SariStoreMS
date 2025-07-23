@@ -1,0 +1,28 @@
+@import 'tailwindcss';
+
+:root {
+    --bg-dark: hsl(223 88% 2%);
+    --bg: hsl(216 64% 5%);
+    --bg-light: hsl(214 40% 9%);
+    --text: hsl(214 100% 97%);
+    --text-muted: hsl(214 36% 72%);
+    --highlight: hsl(214 23% 41%);
+    --border: hsl(214 30% 30%);
+    --border-muted: hsl(214 43% 19%);
+    --primary: hsl(214 78% 73%);
+    --secondary: hsl(35 58% 62%);
+    --danger: hsl(9 26% 64%);
+    --warning: hsl(52 19% 57%);
+    --success: hsl(146 17% 59%);
+    --info: hsl(217 28% 65%);  
+}
+
+* {
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body {
+    background-color: var(--bg);
+    color: var(--text);
+}

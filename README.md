@@ -1,10 +1,26 @@
 # 🏪 SariStore MS
 
-> **Work in Progress** - A comprehensive management system for Filipino sari-sari store operators and employees
+> **Work in Progress** – A comprehensive management system for Filipino sari-sari store operators and employees  
+> **📱 Note**: This system currently supports desktop only. Mobile support is **coming soon**.
+
+## 📸 Screenshots
+
+### Login Page
+![Login Page](./screenshots/login-page.png)  
+*Modern, clean login interface for store employees*
+
+### Dashboard (Coming Soon)
+![Dashboard Preview](./screenshots/dashboard-preview.png)  
+*Main dashboard showing sales overview and quick actions*
+
+> **Note**: More screenshots will be added as features are implemented
 
 ## 📋 Overview
 
-SariStore MS is a modern point-of-sale and inventory management system specifically designed for sari-sari stores in the Philippines. This system helps store owners and employees manage daily operations, track inventory, handle customer credit ("utang"), and generate sales reports.
+**SariStore MS** is a modern point-of-sale and inventory management system specifically designed for sari-sari stores in the Philippines. This system helps store owners and employees manage daily operations, track inventory, handle customer credit ("utang"), and generate sales reports.
+
+> ⚠️ **Mobile Support Coming Soon**  
+> This app is **desktop-first**, and mobile functionality is planned in a future update.
 
 ## 🚀 Tech Stack
 
@@ -22,7 +38,7 @@ SariStore MS is a modern point-of-sale and inventory management system specifica
 
 ### 🛒 Sales Management
 - [ ] Point-of-sale interface
-- [ ] Barcode scanning support
+- [ ] Barcode scanning support (if able to)
 - [ ] Multiple payment methods (Cash, GCash, etc.)
 - [ ] Receipt generation
 - [ ] Daily sales reporting
@@ -62,6 +78,9 @@ saristore-ms/
 │   │   ├── middleware/    # Authentication, validation
 │   │   └── config/        # Database & app configuration
 │   └── package.json
+├── screenshots/           # Project screenshots
+│   ├── login-page.png
+│   └── dashboard-preview.png
 └── README.md
 ```
 
@@ -84,17 +103,17 @@ saristore-ms/
    ```bash
    cd server
    npm install
-   
+
    # Create environment file from template
    cp .env.example .env
    # Edit .env with your configuration (see Environment Variables section)
-   
+
    # Run database migrations
    npm run migrate
-   
+
    # Seed initial data
    npm run seed
-   
+
    # Start development server
    npm run dev
    ```
@@ -103,7 +122,7 @@ saristore-ms/
    ```bash
    cd client
    npm install
-   
+
    # Start development server
    npm run dev
    ```
@@ -116,14 +135,14 @@ saristore-ms/
 
 The system uses a comprehensive relational database design with the following key entities:
 
-- **Profiles** - Personal information for users and customers
-- **Accounts** - Employee login credentials and roles
-- **Roles & Permissions** - Access control system
-- **Products** - Store inventory items
-- **Sales & SaleItems** - Transaction records
-- **Customers** - Customer information and credit limits
-- **Utangs** - Customer credit/debt tracking
-- **UtangPayments** - Payment history for customer debts
+- **Profiles** – Personal information for users and customers  
+- **Accounts** – Employee login credentials and roles  
+- **Roles & Permissions** – Access control system  
+- **Products** – Store inventory items  
+- **Sales & SaleItems** – Transaction records  
+- **Customers** – Customer information and credit limits  
+- **Utangs** – Customer credit/debt tracking  
+- **UtangPayments** – Payment history for customer debts  
 
 ## 🔧 Environment Variables
 
@@ -133,21 +152,21 @@ Create a `.env` file in the server directory with the following variables:
 # Database Configuration
 DB_TYPE=SQLITE                    # Use SQLITE for development, POSTGRESQL for production
 DB_HOST=localhost                 # Database host (PostgreSQL only)
-DB_PORT=5432                     # Database port (PostgreSQL only)
+DB_PORT=5432                      # Database port (PostgreSQL only)
 DB_NAME=saristore                # Database name (PostgreSQL only)
 DB_USER=your_username            # Database username (PostgreSQL only)
 DB_PASSWORD=your_password        # Database password (PostgreSQL only)
 
 # Server Configuration
-NODE_ENV=development             # Environment: development, production, test
-PORT=3000                       # Server port
-JWT_SECRET=your_secret_key      # JWT signing secret (generate a strong random string)
+NODE_ENV=development              # Environment: development, production, test
+PORT=3000                         # Server port
+JWT_SECRET=your_secret_key       # JWT signing secret (generate a strong random string)
 ```
 
-**Important**: 
-- Never commit your `.env` file to version control
-- Use strong, unique passwords and secrets
-- For development, you can use SQLite (no additional setup required)
+> 🔐 **Important**:  
+> - Never commit your `.env` file to version control  
+> - Use strong, unique passwords and secrets  
+> - For development, you can use SQLite (no additional setup required)  
 
 ## 📝 Development Progress
 
@@ -156,14 +175,16 @@ JWT_SECRET=your_secret_key      # JWT signing secret (generate a strong random s
 - [x] Sequelize models setup
 - [x] Database configuration
 - [x] Basic project structure
+- [x] Login page UI design
+- [x] SvelteKit frontend setup
+- [x] Model associations and relationships
 
 ### 🔄 In Progress
-- [ ] Model associations and relationships
 - [ ] Authentication middleware
+- [ ] Login functionality
 - [ ] Basic API endpoints
 
 ### 📋 To Do
-- [ ] SvelteKit frontend setup
 - [ ] User interface design
 - [ ] API integration
 - [ ] Testing implementation
@@ -191,7 +212,8 @@ This project is for educational and personal use.
 
 ---
 
-**Note**: This is an ongoing personal project developed for learning purposes. Features and implementation details may change as development progresses.
+**Note**: This is an ongoing personal project developed for learning purposes. Features and implementation details may change as development progresses.  
+**Currently desktop-only – mobile support is planned.**
 
 ## 📞 Contact
 

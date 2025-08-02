@@ -55,6 +55,7 @@ Person:
 PersonAddress:
 - personID: int (FK)
 - addressID: int (FK)
+- isPrimary: boolean
 
 Address:
 - country: string

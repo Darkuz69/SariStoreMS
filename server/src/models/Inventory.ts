@@ -1,7 +1,7 @@
 import sequelize from "../config/database";
 import { DataTypes } from "sequelize";
 
-const Inventory = sequelize.define('Sale', {
+const Inventory = sequelize.define('Inventory', {
     productID: {
         type: DataTypes.STRING,
         allowNull: false,

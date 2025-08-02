@@ -1,4 +1,4 @@
-import { Sequelize, Error } from "sequelize";
+import { Sequelize } from "sequelize";
 import { database, nodeEnv } from "./env";
 
 const sequelize = new Sequelize({
@@ -28,3 +28,5 @@ export const testConnection = async() => {
         process.exit(1);
     }
 };
+
+export default sequelize;

@@ -1,8 +1,3 @@
-import app from "./server";
-import { nodeEnv, port } from "./config/env";
-import { testConnection } from "./utils/databaseUtils";
+import { startServer } from "./server";
 
-app.listen(port, async() => {
-    console.log(`Server running at http://localhost:${port}`);
-    await testConnection();
-});
+startServer();

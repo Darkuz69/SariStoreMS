@@ -92,6 +92,7 @@ SariStoreMS/
 ## 🛣 Roadmap
 
 - [x] **Basic setup** - Project structure, database models
+- [x] **Authentication setup** - Sessions, login, and logout functionality
 - [ ] **Core POS** - Transaction processing, receipt printing
 - [ ] **Inventory System** - Product management, stock tracking  
 - [ ] **Credit Management** - Customer accounts, utang tracking

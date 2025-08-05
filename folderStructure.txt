@@ -1,0 +1,54 @@
+Directory structure:
+└── SariStoreMS/
+     ├── LICENSE
+     ├── README.md
+     ├── docs/
+     │    ├── Classes.txt
+     │    └── sariStore.erd.json
+     ├── package-lock.json
+     ├── package.json
+     └── server/
+          ├── nodemon.json
+          ├── package-lock.json
+          ├── package.json
+          ├── src/
+          │    ├── app.ts
+          │    ├── config/
+          │    │    ├── database.ts
+          │    │    ├── env.ts
+          │    │    └── passport.ts
+          │    ├── controllers/
+          │    │    ├── AuthContoller.ts
+          │    │    └── ProductController.ts
+          │    ├── middlewares/
+          │    ├── models/
+          │    │    ├── Address.ts
+          │    │    ├── Contact.ts
+          │    │    ├── Customer.ts
+          │    │    ├── Inventory.ts
+          │    │    ├── Operator.ts
+          │    │    ├── OperatorRole.ts
+          │    │    ├── Permission.ts
+          │    │    ├── Person.ts
+          │    │    ├── PersonAddress.ts
+          │    │    ├── PersonContact.ts
+          │    │    ├── Product.ts
+          │    │    ├── ProductCategory.ts
+          │    │    ├── Role.ts
+          │    │    ├── RolePermission.ts
+          │    │    ├── Sale.ts
+          │    │    └── SaleItem.ts
+          │    ├── routers/
+          │    │    ├── AuthRoute.ts
+          │    │    ├── ProductRoute.ts
+          │    │    └── index.ts
+          │    ├── scripts/
+          │    │    └── initializeDB.ts
+          │    ├── server.ts
+          │    └── utils/
+          │         ├── bootstrapAdmin.ts
+          │         ├── databaseUtils.ts
+          │         ├── modelSync.ts
+          │         ├── operatorUtils.ts
+          │         └── passwordUtils.ts
+          └── tsconfig.json

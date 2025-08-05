@@ -1,6 +1,17 @@
 import sequelize from "../config/database";
 import { DataTypes } from "sequelize";
 
+export interface PersonAttributes {
+    id?: number,
+    firstName: string,
+    lastName: string,
+    middleName?: string,
+    suffix?: string,
+    birthDate: Date,
+    createdAt?: Date,
+    updatedAt?: Date,
+};
+
 const Person = sequelize.define('Person', {
     firstName: {
         type: DataTypes.STRING,
@@ -17,7 +28,7 @@ const Person = sequelize.define('Person', {
         type: DataTypes.STRING,
     },
     birthDate: {
-        type: DataTypes.STRING,
+        type: DataTypes.DATE,
         allowNull: false,
     },
 });

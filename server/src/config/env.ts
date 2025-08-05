@@ -2,6 +2,7 @@ import dotenv from "dotenv";
 
 dotenv.config();
 
+export const sessionSecret = process.env.SESSION_SECRET;
 export const nodeEnv = process.env.NODE_ENV; 
 export const port = process.env.SERVER_PORT;
 export const database = {

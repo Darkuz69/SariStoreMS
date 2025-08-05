@@ -1,8 +1,8 @@
 import crypto from "crypto";
 
 export const generateOperatorCode = () => {
-    const LENGTH = 8;
+    const LENGTH = 4;
 
-    return crypto.randomBytes(8).toString('hex').toUpperCase();
+    return "OP-" + crypto.randomBytes(4).toString('hex').toUpperCase();
 };
 

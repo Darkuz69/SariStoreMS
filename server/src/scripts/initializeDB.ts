@@ -1,6 +1,7 @@
 import sequelize from "../config/database";
 import { syncModels } from "../utils/modelSync";
 import { nodeEnv } from "../config/env";
+import { bootstrapAdmin } from "../utils/bootstrapAdmin";
 
 const initializeDatabase = async() => {
     try {
@@ -16,6 +17,8 @@ const initializeDatabase = async() => {
             console.log("📋 Creating/updating models...");
             await syncModels();
             console.log("✅ Models synchronized.");
+
+            await bootstrapAdmin("Admin_123");
         }
         
         console.log("🎉 Database initialization complete!!");

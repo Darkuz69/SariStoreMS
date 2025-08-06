@@ -1,4 +1,4 @@
-import express, { Router, Request, Response } from "express";
+import express, { Request, Response } from "express";
 import cookieParser from "cookie-parser"
 import session from 'express-session';
 import connect from 'connect-pg-simple';
@@ -25,7 +25,7 @@ app.use(express.json({ limit: "10mb" }));
 app.use(cors({
     origin: 'http://localhost:5173',
     credentials: true,
-}))
+}));
 
 const pgSession = connect(session);
 const pgPool = new Pool({

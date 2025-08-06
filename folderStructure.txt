@@ -2,6 +2,35 @@ Directory structure:
 └── SariStoreMS/
      ├── LICENSE
      ├── README.md
+     ├── client/
+     │    ├── README.md
+     │    ├── eslint.config.js
+     │    ├── package-lock.json
+     │    ├── package.json
+     │    ├── src/
+     │    │    ├── app.css
+     │    │    ├── app.d.ts
+     │    │    ├── app.html
+     │    │    ├── components/
+     │    │    │    ├── forms/
+     │    │    │    │    └── LoginForm.svelte
+     │    │    │    └── ui/
+     │    │    │         └── FormInput.svelte
+     │    │    ├── controllers/
+     │    │    ├── lib/
+     │    │    │    ├── assets/
+     │    │    │    │    └── favicon.svg
+     │    │    │    └── index.ts
+     │    │    ├── models/
+     │    │    │    └── Operator.svelte.ts
+     │    │    └── routes/
+     │    │         ├── +layout.svelte
+     │    │         └── +page.svelte
+     │    ├── static/
+     │    │    └── robots.txt
+     │    ├── svelte.config.js
+     │    ├── tsconfig.json
+     │    └── vite.config.ts
      ├── docs/
      │    ├── Classes.txt
      │    └── sariStore.erd.json
@@ -21,6 +50,8 @@ Directory structure:
           │    │    ├── AuthContoller.ts
           │    │    └── ProductController.ts
           │    ├── middlewares/
+          │    │    ├── AuthMiddleware.ts
+          │    │    └── index.ts
           │    ├── models/
           │    │    ├── Address.ts
           │    │    ├── Contact.ts

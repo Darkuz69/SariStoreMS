@@ -1,4 +1,11 @@
-class Operator {
+interface IOperator {
+    operatorCode: string,
+    password: string,
+    isLoading: boolean,
+    errorMessage: string | null,
+}
+
+class Operator implements IOperator {
     operatorCode = $state<string>('');
     password = $state<string>('');
     isLoading = $state<boolean>(false);
@@ -10,9 +17,9 @@ class Operator {
         this.password = password;
     }
 
-    async login() {
-        this.isLoading = true;
-        this.errorMessage = null;
+    static async login(operator: IOperator): Promise<boolean> {
+        operator.isLoading = true;
+        operator.errorMessage = null;
 
         try {
             const response = await fetch('http://localhost:3000/api/v1/auth/login', {
@@ -21,23 +28,23 @@ class Operator {
                     'Content-Type': 'application/json'
                 },
                 body: JSON.stringify({
-                    operatorId: this.operatorCode,
-                    password: this.password
+                    operatorId: operator.operatorCode,
+                    password: operator.password
                 })
             });
 
             if (!response.ok) {
-                const errorData = await response.json();
-                this.errorMessage = errorData.message || "❌ Invaild operator code or password.";
+                const errorData = await response.json().catch(() => {});
+                operator.errorMessage = errorData.message || "❌ Invaild operator code or password.";
                 return false;
             }
 
             return true;
         } catch(error) {
-            this.errorMessage = "❌ An error occurred while trying to login. Please try again later.";
+            operator.errorMessage = "❌ An error occurred while trying to login. Please try again later.";
             return false;
         } finally {
-            this.isLoading = false;
+            operator.isLoading = false;
         }
     }
 }

@@ -3,12 +3,14 @@ import passport from "passport";
 
 const AuthController = {
     login: (req: Request, res: Response, next: Function) => {
+        if(req.isAuthenticated()) return res.status(200).json({ message: "✅ Already logged in." });
+
         passport.authenticate('local', (err: any, user: any, info: any) => {
             if(err) return next(err);
             if(!user) return res.status(401).json({ message: "❌ Invaild operator code or password." });
             req.logIn(user, (err: any) => {
                 if(err) return next(err);
-                return res.status(200).json({ message: "✅ Login successful.", user });
+                return res.status(200).json({ message: "✅ Login successful." });
             });
         })(req, res, next);
     },
